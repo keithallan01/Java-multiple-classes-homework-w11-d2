@@ -31,4 +31,10 @@ public class BookTest {
     public void startsWithNoBooks(){
         assertEquals(0, book.bookCount());
     }
+
+    @Test
+    public void canAddBook(){
+        book.addBook(book);
+        assertEquals(1, book.bookCount());
+    }
 }
