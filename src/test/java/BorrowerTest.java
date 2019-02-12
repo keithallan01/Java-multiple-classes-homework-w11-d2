@@ -6,6 +6,9 @@ import static org.junit.Assert.assertEquals;
 public class BorrowerTest {
 
     Borrower borrower;
+    Library library;
+    Book book;
+
 
     @Before
     public void before(){
@@ -16,4 +19,12 @@ public class BorrowerTest {
     public void initiallyHasNoBooks(){
         assertEquals(0, borrower.getBookCount());
     }
+
+    @Test
+    public void addBookToCollection(){
+        borrower.addBook(book);
+        assertEquals(1, borrower.getBookCount());
+    }
+
+
 }

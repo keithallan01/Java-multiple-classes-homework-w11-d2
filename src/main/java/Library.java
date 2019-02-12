@@ -23,4 +23,14 @@ public class Library {
     public int getCapacity(){
         return this.capacity;
     }
+
+    public void removeBook(){
+        this.books.remove(0);
+    }
+
+    public void lendBook(Borrower borrower){
+        Book book = borrower.removeBook();
+        this.books.add(book);
+    }
 }
+
