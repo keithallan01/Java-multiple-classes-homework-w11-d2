@@ -27,14 +27,5 @@ public class BookTest {
         assertEquals("Fantasy", book.getGenre());
     }
 
-    @Test
-    public void startsWithNoBooks(){
-        assertEquals(0, book.bookCount());
-    }
 
-    @Test
-    public void canAddBook(){
-        book.addBook(book);
-        assertEquals(1, book.bookCount());
-    }
 }
